@@ -32,7 +32,9 @@ description:
 # In the commands section, list your runnable scripts, notebooks, and other code.
 # Use `anaconda-project add-command` to add commands.
 #
-commands: {default: {notebook: data-science-notebook.ipynb, env_spec: default}}
+commands: {default: {notebook: data-science-notebook.ipynb, env_spec: default}, run_example: {
+    unix: jupyter nbconvert --to notebook --execute --inplace data-science-project.ipynb,
+    env_spec: default}}
 
 
 
